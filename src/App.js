@@ -14,9 +14,9 @@ function App() {
 
   return <div>
     <h1>Conversor Euro-Dólar</h1>
-    <input type="text" ref={eurosRef}></input>
-    <button onClick={calcular}>Convertir</button>
-    <div ref={resultadoRef}></div>
+    <input className="centrarElementos" type="text" ref={eurosRef}></input><br/>
+    <button className="centrarElementos" onClick={calcular}>Convertir</button><br/>
+    <div className="centrarElementos resultado" ref={resultadoRef}></div>
     </div>
 }
 
