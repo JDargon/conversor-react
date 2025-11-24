@@ -54,4 +54,6 @@ h1{
 
 body{
   background-image: url("./assets/dollar-to-euro.png");
+  background-repeat: no-repeat;
+  background-position:unset;
 }
