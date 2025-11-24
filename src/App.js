@@ -7,9 +7,9 @@ function App() {
   const resultadoRef = useRef();
 
   const calcular=()=>{
-    const eurosValor=eurosRef.current.value;
+    const eurosValor=parseFloat(eurosRef.current.value);
     const dolares=eurosValor*1.15;
-    resultadoRef.current.innerHTML=dolares;
+    resultadoRef.current.innerHTML=dolares.toFixed(2) + "$";
   }
 
   return <div>
