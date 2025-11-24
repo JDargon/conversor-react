@@ -1,8 +1,9 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import './App.css'
 
 function App() {
 
+  const[valorCambio, setValorCambio]=useState(null);
   const eurosRef = useRef();
   const resultadoRef = useRef();
 
