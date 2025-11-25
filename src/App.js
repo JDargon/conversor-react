@@ -13,9 +13,11 @@ function App() {
 
       try {
 
-        const respuesta = await fetch("https://v6.exchangerate-api.com/v6/46b4858915e04d322817be31/latest/USD");
+        const respuesta = await fetch("https://v6.exchangerate-api.com/v6/46b4858915e04d322817be31/latest/EUR");
         const datos = await respuesta.json();
-        console.log(datos);
+        
+        setValorCambio(datos.conversion_rates.USD);
+       // alert(valorCambio);
 
       } catch (error) {
         console.error("Error al acceder a la API", error);
@@ -29,7 +31,7 @@ function App() {
 
   const calcular = () => {
     const eurosValor = parseFloat(eurosRef.current.value);
-    const dolares = eurosValor * 1.15;
+    const dolares = eurosValor * valorCambio;
     resultadoRef.current.innerHTML = dolares.toFixed(2) + "$";
   }
 
