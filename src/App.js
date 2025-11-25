@@ -17,7 +17,7 @@ function App() {
         const datos = await respuesta.json();
         
         setValorCambio(datos.conversion_rates.USD);
-       // alert(valorCambio);
+       
 
       } catch (error) {
         console.error("Error al acceder a la API", error);
